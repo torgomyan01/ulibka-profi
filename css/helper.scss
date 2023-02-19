@@ -1,0 +1,79 @@
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c2c2c2;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ababab;
+}
+
+
+// HELPER SECTION
+@function printFlexType($type) {
+  @if $type == 's' {
+    @return start;
+  } @else if $type == 'c' {
+    @return center;
+  } @else if $type == 'e' {
+    @return end;
+  } @else if $type == 'sb' {
+    @return space-between;
+  } @else if $type == 'sa' {
+    @return space-around;
+  } @else if $type == 'st' {
+    @return stretch;
+  }
+}
+
+@mixin col($colCount, $margin: 0rem) {
+  width: calc((100% / 12) * #{$colCount} - #{$margin});
+}
+
+@mixin flex($x, $y) {
+  display: flex;
+  justify-content: printFlexType($x);
+  align-items: printFlexType($y);
+}
+
+@mixin bg() {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+// HELPER SECTION
+
+$mobile: 320px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$c-black: #1A1C31;
+$c-black-hover: #1e203a;
+$c-gray: #CDD0D2;
+$c-dark-gray: #838A90;
+$c-purple: #5152FB;
+$c-purple-hover: #4a4bea;
+$c-white: #fff;
+$c-white-hover: #e3e3e3;
+$c-green: #43C876;
+$c-red: #FF2222;
+
+.cursor-pointer{
+  cursor: pointer;
+}
