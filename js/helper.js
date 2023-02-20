@@ -5,6 +5,7 @@ const colors = {
     black: '#000000',
     blue: '#03A0D1',
     grey: '#F5F5F5',
+    green: '#6AC848',
     transparent: 'rgba(0,0,0,0)'
 }
 
@@ -112,13 +113,13 @@ function startCreateStyle(classCountTwo, type, newClassNem, percent, checkInp, c
     if (classCountTwo) {
         sizes.forEach((_size) => {
             const mediaClassName = `${type.minClass}${_size.sizeName}`;
-            if (newClassNem.includes(mediaClassName) && !oldClasses.includes(className)) {
+            if (newClassNem.includes(mediaClassName) && !oldClasses.includes(newClassNem)) {
                 oldClasses.push(newClassNem);
                 medias.innerHTML = `${medias.innerHTML} @media (min-width: ${_size.size}px){.${newClassNem}{${type.styleName}: ${printStyle(type, className, percent, checkInp, classCountTwo)}}}`;
             }
         })
     } else {
-        if (newClassNem.includes(type.minClass) && !oldClasses.includes(className)) {
+        if (newClassNem.includes(type.minClass) && !oldClasses.includes(newClassNem)) {
             oldClasses.push(newClassNem);
             style.innerHTML = `${style.innerHTML} .${newClassNem}{${type.styleName}: ${printStyle(type, className, percent, checkInp, classCount)}}`;
         }

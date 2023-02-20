@@ -165,3 +165,43 @@ header{
     transform: translate(30%, -30%);
   }
 }
+
+.reviews{
+  &-item{
+    border-radius: 0 100px;
+    position: relative;
+    &:after{
+      content: "";
+      width: 18px;
+      height: 15px;
+      background: #03A0D1;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 99%);
+    }
+  }
+}
+
+.vector-site{
+  &-1{
+    position: absolute;
+    top: 258.125rem;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    height: auto;
+  }
+  &-2{
+    position: absolute;
+    top: 299.6875rem;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    height: auto;
+    transform: rotate(-180deg);
+  }
+}
