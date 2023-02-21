@@ -169,6 +169,9 @@ function chekWork(className) {
     return className.includes('!') ? '!' : className.includes('%') ? '%' : '';
 }
 
+function isDivisibleBy(dividend) {
+    return dividend % 1 === 0;
+}
 
 head.appendChild(style);
 head.appendChild(medias);

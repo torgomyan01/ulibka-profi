@@ -28,9 +28,28 @@
     content: "\f017"
 }
 
-
 .fa-check:before {
     content: "\f00c"
+}
+
+.fa-vk:before {
+    content: "\f189"
+}
+
+.fa-instagram:before {
+    content: "\f16d"
+}
+
+.fa-bars:before {
+    content: "\f0c9"
+}
+
+.fa-chevron-left:before {
+    content: "\f053"
+}
+
+.fa-chevron-right:before {
+    content: "\f054"
 }
 
 
