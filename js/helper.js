@@ -19,6 +19,7 @@ const costs = {
     zIndex: 'z-',
     opacity: 'op-',
     borderColor: 'bc-',
+    paddingY: 'py-',
 }
 const allElem = document.querySelectorAll('*');
 const head = document.head;
@@ -49,6 +50,7 @@ const classTypes = [
     {minClass: 'ps-', styleName: 'padding-left'},
     {minClass: 'pt-', styleName: 'padding-top'},
     {minClass: 'pb-', styleName: 'padding-bottom'},
+    {minClass: costs.paddingY, styleName: 'padding'},
     {minClass: 'p-', styleName: 'padding'},
     // FONT SIZE
     {minClass: 'fs-', styleName: 'font-size'},
@@ -155,6 +157,8 @@ function printStyle(type, className, percent, checkInp, classCount) {
             return '';
         case costs.bgBlur:
             return `blur(${percentOrRem})`;
+        case costs.paddingY:
+            return `${percentOrRem} 0`;
         case costs.zIndex:
             return classCount;
         case costs.opacity:

@@ -73,3 +73,11 @@ $('#reviews').slick({
         }
     ]
 });
+
+
+$(window).on('scroll', function (e){
+    e.stopPropagation();
+
+    const windowTop = $(window).scrollTop();
+    console.log(windowTop)
+})
