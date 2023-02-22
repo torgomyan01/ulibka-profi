@@ -87,12 +87,13 @@ a.c-blue:hover {
 nav {
   width: 100%;
   min-height: 9.375rem;
-  background: #FFFFFF;
   box-shadow: 0 0 1.375rem rgba(0, 0, 0, 0.15);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
+  background: rgba(255, 255, 255, 0.7803921569);
+  backdrop-filter: blur(10px);
 }
 @media (max-width: 991px) {
   nav {
@@ -110,6 +111,10 @@ nav .logo {
 }
 nav .logo img {
   transition: 0.3s;
+  width: 200px;
+  height: auto;
+  margin-left: -40px;
+  margin-right: -32px;
 }
 nav.fixed-nav {
   min-height: 4.375rem !important;
@@ -118,8 +123,9 @@ nav.fixed-nav {
   align-items: center;
 }
 nav.fixed-nav .logo img {
-  width: 60px;
+  width: 100px;
   height: auto;
+  margin-left: 0;
 }
 @media (max-width: 576px) {
   nav.fixed-nav .logo img {
@@ -451,6 +457,18 @@ header .container {
 
 .slick-list {
   padding: 30px 0;
+}
+
+.bc-blue {
+  border-color: #03A0D1 !important;
+}
+
+.modal {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.29);
+}
+.modal .modal-content {
+  border: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
