@@ -67,9 +67,42 @@ nav{
   min-height: 9.375rem;
   background: #FFFFFF;
   box-shadow: 0 0 1.375rem rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
   @media (max-width: 991px){
     min-height: auto;
     padding: 15px 0;
+  }
+  .info-block{
+    transition: 0.3s;
+    overflow: hidden;
+    padding: 1rem 0 !important;
+  }
+  .logo{
+    transition: 0.3s;
+    img{
+      transition: 0.3s;
+    }
+  }
+  &.fixed-nav{
+    min-height: 4.375rem !important;
+    @include flex('c', 'c');
+    .logo{
+      img{
+        width: 60px;
+        height: auto;
+        @media (max-width: 576px) {
+          width: 50px;
+        }
+      }
+    }
+    .info-block{
+      padding: 0 !important;
+      height: 0 !important;
+      border: 0 !important;
+    }
   }
 }
 
@@ -217,12 +250,7 @@ header{
 }
 
 .reviews{
-  .slick-prev{
-    left: -10px;
-  }
-  .slick-next {
-    right: -10px;
-  }
+
   &-item{
     border-radius: 1.25rem;
     position: relative;
@@ -358,6 +386,10 @@ header{
   position: absolute;
   z-index: 1;
   box-shadow: 0 0 12px #fff;
+  @media (max-width: 576px) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .slick-next{

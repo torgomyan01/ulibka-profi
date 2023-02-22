@@ -89,12 +89,47 @@ nav {
   min-height: 9.375rem;
   background: #FFFFFF;
   box-shadow: 0 0 1.375rem rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 @media (max-width: 991px) {
   nav {
     min-height: auto;
     padding: 15px 0;
   }
+}
+nav .info-block {
+  transition: 0.3s;
+  overflow: hidden;
+  padding: 1rem 0 !important;
+}
+nav .logo {
+  transition: 0.3s;
+}
+nav .logo img {
+  transition: 0.3s;
+}
+nav.fixed-nav {
+  min-height: 4.375rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav.fixed-nav .logo img {
+  width: 60px;
+  height: auto;
+}
+@media (max-width: 576px) {
+  nav.fixed-nav .logo img {
+    width: 50px;
+  }
+}
+nav.fixed-nav .info-block {
+  padding: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
 }
 
 @media (max-width: 1200px) {
@@ -249,12 +284,6 @@ header .container {
   transform: translate(30%, -30%);
 }
 
-.reviews .slick-prev {
-  left: -10px;
-}
-.reviews .slick-next {
-  right: -10px;
-}
 .reviews-item {
   border-radius: 1.25rem;
   position: relative;
@@ -387,6 +416,12 @@ header .container {
   position: absolute;
   z-index: 1;
   box-shadow: 0 0 12px #fff;
+}
+@media (max-width: 576px) {
+  .slick-prev, .slick-next {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .slick-next {

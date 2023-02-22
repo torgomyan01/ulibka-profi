@@ -24,7 +24,7 @@
 
   <title>Ulibka profi</title>
 </head>
-<body>
+<body class="pt-150">
 
 <img src="images/vector.svg" alt="vector" width="1440" height="580" class="vector-site-1">
 <img src="images/vector.svg" alt="vector" width="1440" height="580" class="vector-site-2">
@@ -39,7 +39,7 @@
       <div class="d-block d-lg-none">
         <i class="fa-solid fa-bars fs-40"></i>
       </div>
-      <div class="py-3 border-bottom d-flex justify-content-between align-items-center d-none d-lg-flex">
+      <div class="py-3 border-bottom d-flex justify-content-between align-items-center d-none d-lg-flex info-block">
         <a href="https://yandex.ru/profile/102648319629" target="_blank" class="c-blue d-flex">
           <i class="fa-solid fa-location-dot fs-25 me-2 mt-1"></i>
           г.Раменское, <br>
@@ -56,30 +56,33 @@
           </button>
         </a>
       </div>
-      <div class="minh-60 mt-1 d-flex justify-content-start align-items-center flex-wrap d-none d-lg-flex">
+      <div class="minh-60 mt-1 d-flex justify-content-start align-items-center flex-wrap d-none d-lg-flex" id="menu-site">
         <a href="#" class="f-comfortaa c-black p-2 px-3 menu-item active-menu">
           ГЛАВНАЯ
         </a>
-        <a href="#" class="f-comfortaa c-black p-2 px-3 menu-item me-2">
+        <a href="#prices" class="f-comfortaa c-black p-2 px-3 menu-item me-2">
           УСЛУГИ
         </a>
-        <a href="#" class="f-comfortaa c-black p-2 px-3 menu-item me-2">
+        <a href="#sale" class="f-comfortaa c-black p-2 px-3 menu-item me-2">
           АКЦИИ
         </a>
-        <a href="#" class="f-comfortaa c-black p-2 px-3 menu-item me-2">
+        <a href="#reviews-section" class="f-comfortaa c-black p-2 px-3 menu-item me-2">
           ОТЗЫВЫ
         </a>
-        <a href="#" class="f-comfortaa c-black p-2 px-3 menu-item me-2">
+        <a href="#doctors" class="f-comfortaa c-black p-2 px-3 menu-item me-2">
           ВРАЧИ
         </a>
-        <a href="#" class="f-comfortaa c-black p-2 px-3 menu-item me-2">
+        <a href="#license" class="f-comfortaa c-black p-2 px-3 menu-item me-2">
           ЛИЦЕНЗИИ
         </a>
-        <a href="#" class="f-comfortaa c-black p-2 px-3 menu-item me-2 text-nowrap">
+        <a href="#info-clinic" class="f-comfortaa c-black p-2 px-3 menu-item me-2 text-nowrap">
           О КЛИНИКЕ
         </a>
-        <a href="#" class="f-comfortaa c-black p-2 px-3 menu-item me-2 ">
+        <a href="#contact" class="f-comfortaa c-black p-2 px-3 menu-item me-2 ">
           КОНТАКТЫ
+        </a>
+        <a href="#my-works" class="f-comfortaa c-black p-2 px-3 menu-item me-2 ">
+          НАШИ РАБОТЫ
         </a>
       </div>
     </div>
@@ -177,15 +180,9 @@
               НАШИ <br>
               КЛИЕНТЫ
             </h3>
-            <p class="mb-0">+7 (925) 810-08-09</p>
             <p class="mb-0">
-              <a href="mailto: vaagn.mnatsakanyan50@gmail.com" class="c-black">
-                vaagn.mnatsakanyan50@gmail.com
-              </a>
+              Более <span class="c-blue">50+</span> клиентов уже пользуются нашими услугами
             </p>
-            <div>
-              <a href="tel:+7 (925) 810-08-09" class="text-decoration-underline c-blue fs-18 fw-bold">Позвонить</a>
-            </div>
           </div>
         </div>
       </div>
@@ -194,7 +191,7 @@
 </section>
 
 
-<section class="prices">
+<section class="prices" id="prices">
   <div class="container">
     <h3 class="fs-62 text-center f-comfortaa c-blue fw-blue mb-4">УСЛУГИ</h3>
     <div class="d-flex justify-content-center justify-content-lg-start align-items-start flex-wrap">
@@ -230,7 +227,7 @@
         </div>
       </div>
       <div class="col-12 col-lg-8 mt-5 mt-lg-0 ps-5">
-        <h4 class="text-uppercase fw-bold f-comfortaa fs-50 c-black">ДИАГНОСТИКА</h4>
+        <h4 class="text-uppercase fw-bold f-comfortaa fs-40 fs-sm-50 c-black">ДИАГНОСТИКА</h4>
         <p class="d-flex justify-content-between align-items-center py-3 border-bottom !bc-blue f-comfortaa mb-0">
           1.Консультация. Первичный осмотр полости рта
           <span class="fw-bold">500</span>
@@ -308,7 +305,7 @@
   </div>
 </section>
 
-<section class="sale mt-100 mb-5">
+<section class="sale mt-100 mb-5" id="sale">
   <div class="container">
     <h3 class="fs-62 text-center f-comfortaa c-blue fw-blue ">АКЦИИ</h3>
     <div class="row mt-5 position-relative" id="sale-section">
@@ -390,7 +387,7 @@
 </section>
 
 
-<section class="reviews mt-100 mb-5">
+<section class="reviews mt-100 mb-5" id="reviews-section">
   <div class="container">
     <h3 class="fs-62 text-center f-comfortaa c-blue fw-blue">ОТЗЫВЫ</h3>
     <div class="row mt-5" id="reviews">
@@ -468,7 +465,7 @@
   </div>
 </section>
 
-<section class="reviews mt-100 mb-5">
+<section class="reviews mt-100 mb-5" id="doctors">
   <div class="container">
     <h3 class="fs-62 text-center f-comfortaa c-blue fw-blue">ВРАЧИ</h3>
     <div class="row mt-lg-5">
@@ -500,7 +497,7 @@
         <div class="d-flex justify-content-center justify-content-lg-start align-items-center mt-4">
           <img src="images/doctor-work-1.png" alt="doctor-work-1" class="me-2 w-200">
           <img src="images/doctor-work-2.png" alt="doctor-work-2" class="me-2 w-200">
-          <img src="images/doctor-work-3.png" alt="doctor-work-3" class="w-200">
+          <img src="images/doctor-work-3.png" alt="doctor-work-3" class="w-200 d-none d-sm-block">
         </div>
 
       </div>
@@ -508,7 +505,7 @@
   </div>
 </section>
 
-<section class="reviews mt-200 mb-5">
+<section class="reviews mt-200 mb-5" id="license">
   <div class="container">
     <h3 class="fs-62 text-center f-comfortaa c-blue fw-blue">ЛИЦЕНЗИИ</h3>
 
@@ -567,7 +564,7 @@
 </section>
 
 
-<section class="reviews mt-100 mb-5">
+<section class="reviews mt-100 mb-5" id="info-clinic">
   <div class="container">
     <h3 class="fs-62 text-center f-comfortaa c-blue fw-blue text-uppercase">О клинике</h3>
     <p class="text-center fs-25 lh-28 c-black f-comfortaa mt-3 %w-lg-80 m-auto">
@@ -623,7 +620,7 @@
 
 
 
-<section class="reviews mt-100 mb-5">
+<section class="reviews mt-100 mb-5" id="contact">
   <div class="container">
     <h3 class="fs-62 text-center f-comfortaa c-blue fw-blue">КОНТАКТЫ</h3>
 
@@ -761,7 +758,7 @@
     </div>
   </div>
 </section>
-<section class="reviews mt-100 mb-5">
+<section class="reviews mt-100 mb-5" id="my-works">
   <div class="container">
     <h3 class="fs-62 text-center f-comfortaa c-blue fw-blue">НАШИ РАБОТЫ</h3>
     <p class="text-center f-comfortaa text-uppercase fs-33 mt-3 fw-bold">До-После</p>
