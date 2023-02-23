@@ -56,9 +56,17 @@
     content: "\f077"
 }
 
-
 .fa-xmark:before {
     content: "\f00d"
+}
+
+.fa-whatsapp:before {
+    content: "\f232"
+}
+
+
+.fa-telegram:before {
+    content: "\f2c6"
 }
 
 
