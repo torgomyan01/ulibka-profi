@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#03A0D1">
 
-  <meta name="description" content="Free Web tutorials">
-  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="description" content="Стоматология Улыбка профи, стоматолог Мнацаканян Ваагн Иванович">
+  <meta name="keywords" content="стоматология, детская стоматология, телефон стоматологии, стоматология отзывы, регистратура стоматология, стоматология врачи, стоматология улыбка">
 
   <meta name="author" content="Andranik Torgomyan">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +30,7 @@
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <title>Улыбка профи</title>
+  <title>Стоматология Улыбка профи</title>
 </head>
 <body class="pt-150">
 
@@ -44,7 +44,7 @@
       <img src="images/logo.svg" alt="Logo site" width="203" height="95">
     </a>
     <div class="w-100 ms-5 d-flex justify-content-end align-items-center d-lg-block">
-      <div class="d-block d-lg-none">
+      <div class="d-block d-lg-none" id="menu-mobile-open-close">
         <i class="fa-solid fa-bars fs-40"></i>
       </div>
       <div class="py-3 border-bottom d-flex justify-content-between align-items-center d-none d-lg-flex info-block">
@@ -97,6 +97,48 @@
     </div>
   </div>
 </nav>
+
+<div class="mobile-menu pt-170">
+  <div class="px-3">
+    <div class="w-100 border-bottom bc-blue text-center py-3">
+      <a href="#home" class="text-uppercase fw-bold f-comfortaa c-blue fs-20 mobile-menu-item">ГЛАВНАЯ</a>
+    </div>
+    <div class="w-100 border-bottom bc-blue text-center py-3">
+      <a href="#prices" class="text-uppercase fw-bold f-comfortaa c-blue fs-20 mobile-menu-item">УСЛУГИ</a>
+    </div>
+    <div class="w-100 border-bottom bc-blue text-center py-3">
+      <a href="#sale" class="text-uppercase fw-bold f-comfortaa c-blue fs-20 mobile-menu-item">АКЦИИ</a>
+    </div>
+    <div class="w-100 border-bottom bc-blue text-center py-3">
+      <a href="#reviews-section" class="text-uppercase fw-bold f-comfortaa c-blue fs-20 mobile-menu-item">ОТЗЫВЫ </a>
+    </div>
+    <div class="w-100 border-bottom bc-blue text-center py-3">
+      <a href="#doctors" class="text-uppercase fw-bold f-comfortaa c-blue fs-20 mobile-menu-item">ВРАЧИ </a>
+    </div>
+    <div class="w-100 border-bottom bc-blue text-center py-3">
+      <a href="#info-clinic" class="text-uppercase fw-bold f-comfortaa c-blue fs-20 mobile-menu-item">О КЛИНИКЕ </a>
+    </div>
+    <div class="w-100 border-bottom bc-blue text-center py-3">
+      <a href="#contact" class="text-uppercase fw-bold f-comfortaa c-blue fs-20 mobile-menu-item">КОНТАКТЫ</a>
+    </div>
+    <div class="w-100 text-center py-3">
+      <a href="#my-works" class="text-uppercase fw-bold f-comfortaa c-blue fs-20 mobile-menu-item">НАШИ РАБОТЫ</a>
+    </div>
+
+    <div class="mt-4 d-flex justify-content-start align-items-start flex-column flex-sm-row">
+      <button class="btn btn-primary bgc-blue border-0 py-3 px-4 me-4 fw-light w-100 w-sm-280" data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('Заказать консультацию', '')">
+        <i class="fa-solid fa-clipboard-list-check me-2"></i>
+        Заказать консультацию
+      </button>
+      <a href="tel:+7 (925) 810-08-09" class="w-100 w-sm-180">
+        <button class="btn btn-primary bgc-blue border-0 py-3 px-4 fw-light w-100 w-sm-180 mt-2 mt-sm-0">
+          <i class="fa-solid fa-phone me-2"></i>
+          Позвонить
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
 
 
 <header id="home">
@@ -241,7 +283,7 @@
       </div>
     </div>
     <div class="row mt-5">
-      <div class="col-12 col-md-6 col-lg-4 m-auto mt-md-0">
+      <div class="col-11 col-md-6 col-lg-4 m-auto mt-md-0">
         <div class="prices-image">
           <img src="images/price-images.png" alt="price-image" class="w-100 h-auto" width="400" height="330"
                id="price-image">
@@ -293,7 +335,7 @@
     <div class="row mt-4 position-relative" id="sale-section">
       <div class="col-4 px-4">
         <div class="w-100 h-250 position-relative">
-          <img src="images/dentistry-pensioners.png" alt="Sale image" width="612" height="408" class="w-100 h-100 br-20">
+          <img src="images/dentistry-pensioners.png" alt="Sale image" width="612" height="408" class="w-100 h-100 br-20 object-fit-cover">
           <div class="w-100 h-105 bgBlur-3 bg-sale">
             <h4 class="fs-30 fw-bold c-white f-comfortaa">Пенсионерам</h4>
             <p class="fs-14 lh-16 f-comfortaa fw-bold">
@@ -307,7 +349,7 @@
       </div>
       <div class="col-4 px-4">
         <div class="w-100 h-250 position-relative">
-          <img src="images/prof-hygiene-dentistry.png" alt="Sale image" width="612" height="408" class="w-100 h-100 br-20">
+          <img src="images/prof-hygiene-dentistry.png" alt="Sale image" width="612" height="408" class="w-100 h-100 br-20 object-fit-cover">
           <div class="w-100 h-105 bgBlur-3 bg-sale">
             <h4 class="fs-30 fw-bold c-white f-comfortaa">Проф. Гигиена</h4>
             <p class="fs-14 lh-16 f-comfortaa fw-bold">
@@ -321,7 +363,7 @@
       </div>
       <div class="col-4 px-4">
         <div class="w-100 h-250 position-relative">
-          <img src="images/childrens-dentistry-sale.png" alt="Sale image" width="612" height="408" class="w-100 h-100 br-20">
+          <img src="images/childrens-dentistry-sale.png" alt="Sale image" width="612" height="408" class="w-100 h-100 br-20 object-fit-cover" >
           <div class="w-100 h-105 bgBlur-3 bg-sale">
             <h4 class="fs-30 fw-bold c-white f-comfortaa">Детская</h4>
             <p class="fs-14 lh-16 f-comfortaa fw-bold">
@@ -635,7 +677,7 @@
           <i class="fa-solid fa-clipboard-list-check me-2"></i>
           Заказать консультацию
         </button>
-        <a href="tel:+7 (925) 810-08-09" target="_blank" >
+        <a href="tel:+7 (925) 810-08-09" target="_blank" class="w-100 w-sm-180">
           <button class="btn btn-primary bgc-blue border-0 py-3 px-4 fw-light w-100 w-sm-180 mt-2 mt-sm-0">
             <i class="fa-solid fa-phone me-2"></i>
             Позвонить
@@ -809,6 +851,17 @@
   </div>
 </footer>
 
+
+<button class="btn btn-to-top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<a href="tel:+7 (925) 810-08-09" class="btn btn-fix-call">
+  <i class="fa-solid fa-phone"></i>
+  <span>
+    Позвонить
+  </span>
+</a>
 
 <!-- Modal -->
 <div class="modal fade" id="orderCall" tabindex="-1" aria-labelledby="orderCallLabel"

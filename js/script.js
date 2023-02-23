@@ -1,19 +1,29 @@
 const {
     afterBeforeRange,
-    allMenuItems
+    allMenuItems,
+    btnToTop,
+    btnCall,
+    mobileMenu,
+    menuMobile
 } = {
     afterBeforeRange: document.querySelectorAll('.after-before-range'),
-    allMenuItems: $('.menu-item')
+    allMenuItems: $('.menu-item'),
+    btnToTop: $('.btn-to-top'),
+    btnCall: $('.btn-fix-call'),
+    mobileMenu: $('#menu-mobile-open-close'),
+    menuMobile: $('.mobile-menu'),
 }
 
 const {
     navFix,
     nav,
-    activeMenu
+    activeMenu,
+    active
 } = {
     navFix: 'fixed-nav',
     nav: 'nav',
-    activeMenu: 'active-menu'
+    activeMenu: 'active-menu',
+    active: 'active'
 }
 
 afterBeforeRange.forEach((item) => {
@@ -89,14 +99,23 @@ $('#reviews').slick({
 $(window).on('scroll', function (e){
     e.stopPropagation();
     const windowTop = $(window).scrollTop();
-    windowTop >= 50 ? $(nav).addClass(navFix) : $(nav).removeClass(navFix);
+    if(windowTop >= 50){
+        $(nav).addClass(navFix);
+        menuMobile.css('padding-top', '70px');
+    } else {
+        $(nav).removeClass(navFix);
+        menuMobile.css('padding-top', '130px');
+    }
 
     // ACTIVE MENU FUNCTION
     changeActiveMenu(windowTop);
+
+    // GO TOP BTN
+    btnTop(windowTop);
 }).scroll()
 
 function changeActiveMenu(windowTop){
-    $('.menu-item').map((index, elem) => {
+    allMenuItems.map((index, elem) => {
         const url = $(elem).attr('href');
         const section = $(`${url}`);
         const elemTop = section.offset().top;
@@ -105,6 +124,22 @@ function changeActiveMenu(windowTop){
             $(elem).addClass(activeMenu);
         }
     })
+}
+
+
+btnToTop.on('click', function (){
+    $(window).scrollTop(0);
+})
+
+
+function btnTop(scrollTop){
+    if(scrollTop > 200){
+        btnToTop.addClass(active);
+        btnCall.addClass(active);
+    } else {
+        btnToTop.removeClass(active);
+        btnCall.removeClass(active);
+    }
 }
 
 
@@ -331,7 +366,7 @@ function changeActivePriceInfo(selectedInfo){
         $('#list-prices').append(`
                 <p class="d-flex justify-content-between align-items-center py-2 border-bottom bc-blue f-comfortaa mb-0">
                     <span><b>${index + 1}.</b> ${list[0]}</span>
-                    <button  data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('${list[0]}', '${selectedInfo.name}')" class="btn btn-primary bgc-blue border-0 fs-6" style="width: 180px"> Заказать ${list[1]}</button>
+                    <button  data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('${list[0]}', '${selectedInfo.name}')" class="btn btn-primary bgc-blue border-0 fs-6" style="min-width: 11.25rem;"> Заказать ${list[1]}</button>
                 </p>
             `)
     })
@@ -339,6 +374,33 @@ function changeActivePriceInfo(selectedInfo){
 
 
 function AddInfoModal(catName, catItem){
-    const text = `${catItem ? catItem + ',\n' : ''} ${catName}`;
+    const text = `${catItem ? catItem + ',\n' : ''}${catName}`;
     $('#text-modal').val(text)
+}
+
+
+mobileMenu.on('click', function (){
+    const thisElem = $(this);
+    if(thisElem.hasClass(active)){
+        closeMobileMenu(thisElem);
+    } else {
+        openMobileMenu(thisElem);
+    }
+})
+
+
+$('.mobile-menu-item').on('click', function (){
+    closeMobileMenu(mobileMenu)
+})
+
+function closeMobileMenu(thisElem){
+    thisElem.removeClass(active);
+    menuMobile.removeClass(active);
+    thisElem.html('<i class="fa-solid fa-bars fs-40"></i>')
+}
+
+function openMobileMenu(thisElem){
+    thisElem.addClass(active);
+    menuMobile.addClass(active);
+    thisElem.html('<i class="fa-solid fa-xmark fs-40"></i>')
 }
