@@ -593,5 +593,11 @@ header .container {
     transform: translateX(5%);
   }
 }
+a.c-white {
+  transition: 0.3s;
+}
+a.c-white:hover {
+  color: #c4c4c4;
+}
 
 /*# sourceMappingURL=style.css.map */

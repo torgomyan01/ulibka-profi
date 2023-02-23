@@ -562,3 +562,10 @@ header{
   }
   100%{}
 }
+
+a.c-white{
+  transition: 0.3s;
+  &:hover{
+    color: #c4c4c4;
+  }
+}
