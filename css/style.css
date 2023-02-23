@@ -541,6 +541,7 @@ header .container {
 }
 .btn-fix-call:hover {
   color: #fff;
+  background: #03A0D1;
 }
 .btn-fix-call:hover span {
   max-width: 200px;
