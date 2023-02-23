@@ -5,6 +5,12 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#03A0D1">
+
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+
+  <meta name="author" content="Andranik Torgomyan">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -22,7 +28,9 @@
   <script src="js/slick.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
 
-  <title>Ulibka profi</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <title>Улыбка профи</title>
 </head>
 <body class="pt-150">
 
@@ -73,9 +81,9 @@
         <a href="#doctors" class="f-comfortaa c-black p-2 px-3 menu-item me-2">
           ВРАЧИ
         </a>
-        <a href="#license" class="f-comfortaa c-black p-2 px-3 menu-item me-2">
-          ЛИЦЕНЗИИ
-        </a>
+<!--        <a href="#license" class="f-comfortaa c-black p-2 px-3 menu-item me-2">-->
+<!--          ЛИЦЕНЗИИ-->
+<!--        </a>-->
         <a href="#info-clinic" class="f-comfortaa c-black p-2 px-3 menu-item me-2 text-nowrap">
           О КЛИНИКЕ
         </a>
@@ -107,7 +115,7 @@
         </p>
         <div class="mt-4 d-flex justify-content-start align-items-start flex-column flex-sm-row">
           <button class="btn btn-primary bgc-blue border-0 py-3 px-4 me-4 fw-light w-100 !w-sm-280"
-                  data-bs-toggle="modal" data-bs-target="#orderCall">
+                  data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('Заказать консультацию', '')">
             <i class="fa-solid fa-clipboard-list-check me-2"></i>
             Заказать консультацию
           </button>
@@ -274,7 +282,7 @@
           </a>
         </div>
       </div>
-      <button class="btn btn-light c-blue px-5 py-3 br-50 bgc-white mt-3 mt-lg-0"  data-bs-toggle="modal" data-bs-target="#orderCall">Обратный звонок</button>
+      <button class="btn btn-light c-blue px-5 py-3 br-50 bgc-white mt-3 mt-lg-0"  data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('Обратный звонок', '')">Обратный звонок</button>
     </div>
   </div>
 </section>
@@ -282,46 +290,46 @@
 <section class="sale mt-100 mb-5" id="sale">
   <div class="container">
     <h3 class="fs-62 text-center f-comfortaa c-blue fw-blue ">АКЦИИ</h3>
-    <div class="row mt-5 position-relative" id="sale-section">
+    <div class="row mt-4 position-relative" id="sale-section">
       <div class="col-4 px-4">
         <div class="w-100 h-250 position-relative">
-          <img src="images/sale-image.jpg" alt="Sale image" width="333" height="246" class="w-100 h-100 br-20">
+          <img src="images/dentistry-pensioners.png" alt="Sale image" width="612" height="408" class="w-100 h-100 br-20">
           <div class="w-100 h-105 bgBlur-3 bg-sale">
-            <h4 class="fs-30 fw-bold c-white f-comfortaa">До 8 марта</h4>
+            <h4 class="fs-30 fw-bold c-white f-comfortaa">Пенсионерам</h4>
             <p class="fs-14 lh-16 f-comfortaa fw-bold">
-              До 8 марта покупатели могут рассчитывать на скидку 30%
+              10% скидки на лечение и удаление пенсионерам.
             </p>
           </div>
           <div class="sale-percent">
-            30%
+            10%
           </div>
         </div>
       </div>
       <div class="col-4 px-4">
         <div class="w-100 h-250 position-relative">
-          <img src="images/sale-image.jpg" alt="Sale image" width="333" height="246" class="w-100 h-100 br-20">
+          <img src="images/prof-hygiene-dentistry.png" alt="Sale image" width="612" height="408" class="w-100 h-100 br-20">
           <div class="w-100 h-105 bgBlur-3 bg-sale">
-            <h4 class="fs-30 fw-bold c-white f-comfortaa">До 8 марта</h4>
+            <h4 class="fs-30 fw-bold c-white f-comfortaa">Проф. Гигиена</h4>
             <p class="fs-14 lh-16 f-comfortaa fw-bold">
-              До 8 марта покупатели могут рассчитывать на скидку 30%
+              Проф. Гигиена за двоих 5500.
             </p>
           </div>
           <div class="sale-percent">
-            30%
+            50%
           </div>
         </div>
       </div>
       <div class="col-4 px-4">
         <div class="w-100 h-250 position-relative">
-          <img src="images/sale-image.jpg" alt="Sale image" width="333" height="246" class="w-100 h-100 br-20">
+          <img src="images/childrens-dentistry-sale.png" alt="Sale image" width="612" height="408" class="w-100 h-100 br-20">
           <div class="w-100 h-105 bgBlur-3 bg-sale">
-            <h4 class="fs-30 fw-bold c-white f-comfortaa">До 8 марта</h4>
+            <h4 class="fs-30 fw-bold c-white f-comfortaa">Детская</h4>
             <p class="fs-14 lh-16 f-comfortaa fw-bold">
-              До 8 марта покупатели могут рассчитывать на скидку 30%
+              Детская стоматология 20% скидки
             </p>
           </div>
           <div class="sale-percent">
-            30%
+            20%
           </div>
         </div>
       </div>
@@ -355,7 +363,7 @@
           </a>
         </div>
       </div>
-      <button class="btn btn-light c-blue px-5 py-3 br-50 bgc-white mt-3 mt-lg-0" data-bs-toggle="modal" data-bs-target="#orderCall">Обратный звонок</button>
+      <button class="btn btn-light c-blue px-5 py-3 br-50 bgc-white mt-3 mt-lg-0" data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('Обратный звонок', '')">Обратный звонок</button>
     </div>
   </div>
 </section>
@@ -364,7 +372,7 @@
 <section class="reviews mt-100 mb-5" id="reviews-section">
   <div class="container">
     <h3 class="fs-62 text-center f-comfortaa c-blue fw-blue">ОТЗЫВЫ</h3>
-    <div class="row mt-5" id="reviews">
+    <div class="row mt-4" id="reviews">
       <div class="col-4 px-4">
         <div class="w-100 minh-313">
           <div class="w-100 h-250 h-lg-222 bgc-blue reviews-item pt-3 px-3">
@@ -479,32 +487,32 @@
   </div>
 </section>
 
-<section class="reviews mt-200 mb-5" id="license">
-  <div class="container">
-    <h3 class="fs-62 text-center f-comfortaa c-blue fw-blue">ЛИЦЕНЗИИ</h3>
+<!--<section class="reviews mt-200 mb-5" id="license">-->
+<!--  <div class="container">-->
+<!--    <h3 class="fs-62 text-center f-comfortaa c-blue fw-blue">ЛИЦЕНЗИИ</h3>-->
 
-    <div class="row mt-5 bgBlur-25 border bc-blue br-20 py-5 px-2" style="background: rgba(255, 255, 255, 0.21);">
-      <div class="col-4 mb-3 mh-277 overflow-hidden">
-        <img src="images/certificate-1.png" alt="certificate-1" class="w-100">
-      </div>
-      <div class="col-4 mb-3 mh-277 overflow-hidden">
-        <img src="images/certificate-2.png" alt="certificate-1" class="w-100">
-      </div>
-      <div class="col-4 mb-3 mh-277 overflow-hidden">
-        <img src="images/certificate-3.png" alt="certificate-1" class="w-100">
-      </div>
-      <div class="col-4 mb-3 mh-277 overflow-hidden">
-        <img src="images/certificate-1.png" alt="certificate-1" class="w-100">
-      </div>
-      <div class="col-4 mb-3 mh-277 overflow-hidden">
-        <img src="images/certificate-1.png" alt="certificate-1" class="w-100">
-      </div>
-      <div class="col-4 mb-3 mh-277 overflow-hidden">
-        <img src="images/certificate-1.png" alt="certificate-1" class="w-100">
-      </div>
-    </div>
-  </div>
-</section>
+<!--    <div class="row mt-5 bgBlur-25 border bc-blue br-20 py-5 px-2" style="background: rgba(255, 255, 255, 0.21);">-->
+<!--      <div class="col-4 mb-3 mh-277 overflow-hidden">-->
+<!--        <img src="images/certificate-1.png" alt="certificate-1" class="w-100">-->
+<!--      </div>-->
+<!--      <div class="col-4 mb-3 mh-277 overflow-hidden">-->
+<!--        <img src="images/certificate-2.png" alt="certificate-1" class="w-100">-->
+<!--      </div>-->
+<!--      <div class="col-4 mb-3 mh-277 overflow-hidden">-->
+<!--        <img src="images/certificate-3.png" alt="certificate-1" class="w-100">-->
+<!--      </div>-->
+<!--      <div class="col-4 mb-3 mh-277 overflow-hidden">-->
+<!--        <img src="images/certificate-1.png" alt="certificate-1" class="w-100">-->
+<!--      </div>-->
+<!--      <div class="col-4 mb-3 mh-277 overflow-hidden">-->
+<!--        <img src="images/certificate-1.png" alt="certificate-1" class="w-100">-->
+<!--      </div>-->
+<!--      <div class="col-4 mb-3 mh-277 overflow-hidden">-->
+<!--        <img src="images/certificate-1.png" alt="certificate-1" class="w-100">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 
 <section class="order-consultation mt-100">
   <div class="container">
@@ -532,7 +540,7 @@
           </a>
         </div>
       </div>
-      <button class="btn btn-light c-blue px-5 py-3 br-50 bgc-white mt-3 mt-lg-0"  data-bs-toggle="modal" data-bs-target="#orderCall">Обратный звонок</button>
+      <button class="btn btn-light c-blue px-5 py-3 br-50 bgc-white mt-3 mt-lg-0"  data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('Обратный звонок', '')">Обратный звонок</button>
     </div>
   </div>
 </section>
@@ -623,7 +631,7 @@
           шоссе, 50</a>
       </div>
       <div class="mt-3 d-flex justify-content-start align-items-start flex-column flex-sm-row">
-        <button class="btn btn-primary bgc-blue border-0 py-3 px-4 me-4 fw-light w-100 w-sm-280" data-bs-toggle="modal" data-bs-target="#orderCall">
+        <button class="btn btn-primary bgc-blue border-0 py-3 px-4 me-4 fw-light w-100 w-sm-280" data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('Заказать консультацию', '')">
           <i class="fa-solid fa-clipboard-list-check me-2"></i>
           Заказать консультацию
         </button>
@@ -747,12 +755,12 @@
       <div class="col-12 col-md-6">
 
         <div class="after-before">
-          <div class="before" style="background-image: url(https://picsum.photos/636/300/?random=1)">
+          <div class="before" style="background-image: url(images/before-after-1-1.png)">
             <div class="after-before-text left">
               До
             </div>
           </div>
-          <div class="after" style="background-image: url(https://picsum.photos/636/300/?random=2)">
+          <div class="after" style="background-image: url(images/before-after-1-2.png)">
             <div class="after-before-text right">
               ПОСЛЕ
             </div>
@@ -764,12 +772,12 @@
       <div class="col-12 col-md-6 mt-4 mt-md-0">
 
         <div class="after-before">
-          <div class="before" style="background-image: url(https://picsum.photos/636/300/?random=3)">
+          <div class="before" style="background-image: url(images/before-after-2-1.png)">
             <div class="after-before-text left">
               До
             </div>
           </div>
-          <div class="after" style="background-image: url(https://picsum.photos/636/300/?random=4)">
+          <div class="after" style="background-image: url(images/before-after-2-2.png)">
             <div class="after-before-text right">
               ПОСЛЕ
             </div>
@@ -832,7 +840,7 @@
           </div>
           <div class="col-12 mt-2">
             <label class="w-100">
-              <textarea type="text" rows="3" cols="4" placeholder="Ваше Текст" class="bgc-transparent border bc-blue w-100 ps-2 pt-1 rounded-1" style="resize: none"></textarea>
+              <textarea id="text-modal" type="text" rows="3" cols="4" placeholder="Ваше Текст" class="bgc-transparent border bc-blue w-100 ps-2 pt-1 rounded-1" style="resize: none"></textarea>
             </label>
           </div>
 

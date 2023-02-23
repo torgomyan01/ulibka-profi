@@ -331,8 +331,14 @@ function changeActivePriceInfo(selectedInfo){
         $('#list-prices').append(`
                 <p class="d-flex justify-content-between align-items-center py-2 border-bottom bc-blue f-comfortaa mb-0">
                     <span><b>${index + 1}.</b> ${list[0]}</span>
-                    <button  data-bs-toggle="modal" data-bs-target="#orderCall" class="btn btn-primary bgc-blue border-0 fs-6" data-name="${list[0]}" data-category="${selectedInfo.name}" style="width: 180px"> Заказать ${list[1]}</button>
+                    <button  data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('${list[0]}', '${selectedInfo.name}')" class="btn btn-primary bgc-blue border-0 fs-6" style="width: 180px"> Заказать ${list[1]}</button>
                 </p>
             `)
     })
+}
+
+
+function AddInfoModal(catName, catItem){
+    const text = `${catItem ? catItem + ',\n' : ''} ${catName}`;
+    $('#text-modal').val(text)
 }

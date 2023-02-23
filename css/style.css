@@ -308,16 +308,17 @@ header .container {
 
 .vector-site-1 {
   position: absolute;
-  top: 258.125rem;
+  top: 180.125rem;
   left: 0;
   width: 100%;
   z-index: -1;
   object-fit: cover;
   height: auto;
+  opacity: 0.7;
 }
 .vector-site-2 {
   position: absolute;
-  top: 299.6875rem;
+  top: 295.6875rem;
   left: 0;
   width: 100%;
   z-index: -1;
