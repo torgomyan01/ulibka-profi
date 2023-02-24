@@ -26,6 +26,9 @@ const {
     active: 'active'
 }
 
+// START LAZY
+$('.lazy').lazy();
+
 afterBeforeRange.forEach((item) => {
     item.addEventListener("input", function (e){
         const value = +this.value;
@@ -404,3 +407,60 @@ function openMobileMenu(thisElem){
     menuMobile.addClass(active);
     thisElem.html('<i class="fa-solid fa-xmark fs-40"></i>')
 }
+
+
+const modalError = $('#modal-message');
+const modalSuccess = $('#modal-success');
+const modalSpinner = $('#modal-spinner');
+
+const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+$('#send-message').on('submit', function (e){
+    e.preventDefault();
+    const name = e.target.name.value;
+    const tel = e.target.tel.value;
+    const email = e.target.email.value;
+    const text = e.target.text.value;
+
+    if(name && tel && email && text){
+
+        if(!email.match(validRegex)){
+            modalError.removeClass('d-none');
+            return;
+        }
+
+        modalError.addClass('d-none');
+        modalSpinner.removeClass('d-none').attr('disabled', 'true');
+
+        $.ajax({
+            url: '../send-email.php',
+            method: 'post',
+            data: {
+                name,
+                tel,
+                email,
+                text
+            },
+            success: function(data){
+                modalSpinner.addClass('d-none');
+                if(+data === 1){
+                    modalSuccess.removeClass('d-none');
+                    modalError.addClass('d-none')
+                }
+
+                if(+data === 0){
+                    modalSuccess.addClass('d-none');
+                    modalError.removeClass('d-none')
+                }
+            },
+            error: function (e){
+                console.log(e)
+            }
+        });
+    } else {
+        modalError.removeClass('d-none')
+    }
+})
+
+
+

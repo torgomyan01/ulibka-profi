@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#03A0D1">
 
@@ -26,6 +26,7 @@
   <!--  SCRIPTS-->
   <script src="js/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/jquery.lazy.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -34,8 +35,8 @@
 </head>
 <body class="pt-150">
 
-<img src="images/vector.svg" alt="vector" width="1440" height="580" class="vector-site-1">
-<img src="images/vector.svg" alt="vector" width="1440" height="580" class="vector-site-2">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/vector.svg" alt="vector" width="1" height="1" class="vector-site-1 lazy">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/vector.svg" alt="vector" width="1" height="1" class="vector-site-2 lazy">
 
 
 <nav>
@@ -44,7 +45,7 @@
       <img src="images/footer-logo.png" alt="Logo site" width="203" height="95">
     </a>
     <div class="w-100 ms-5 d-flex justify-content-end align-items-center d-lg-block">
-      <div class="d-block d-lg-none" id="menu-mobile-open-close">
+      <div class="c-white d-lg-none" id="menu-mobile-open-close">
         <i class="fa-solid fa-bars fs-40"></i>
       </div>
       <div class="py-3 border-bottom d-flex justify-content-between align-items-center d-none d-lg-flex info-block">
@@ -53,9 +54,9 @@
           г.Раменское, <br>
           Северное шоссе, 50
         </a>
-        <a href="mailto:vaagn.mnatsakanyan50@gmail.com" target="_blank" class="c-white d-flex">
+        <a href="mailto:contact@ulibkaprofi.ru" target="_blank" class="c-white d-flex">
           <i class="fa-solid fa-envelope fs-25 me-2"></i>
-          vaagn.mnatsakanyan50@gmail.com
+          contact@ulibkaprofi.ru
         </a>
         <div class="d-flex justify-content-end align-items-center">
           <a href="tel: +7 (925) 810-08-09" class="me-3">
@@ -134,12 +135,12 @@
     </div>
 
     <div class="mt-4 d-flex justify-content-start align-items-start flex-column flex-sm-row">
-      <button class="btn btn-primary bgc-blue border-0 py-3 px-4 me-4 fw-light w-100 !w-sm-280" data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('Заказать консультацию', '')">
+      <button class="btn btn-primary bgc-blue border-0 py-3 px-4 me-4 fw-light w-100 w-sm-280" data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('Заказать консультацию', '')">
         <i class="fa-solid fa-clipboard-list-check me-2"></i>
         Заказать консультацию
       </button>
-      <a href="tel:+7 (925) 810-08-09" class="w-100 !w-sm-180">
-        <button class="btn btn-primary bgc-blue border-0 py-3 px-4 fw-light w-100 !w-sm-180 mt-2 mt-sm-0">
+      <a href="tel:+7 (925) 810-08-09" class="w-100 w-sm-180">
+        <button class="btn btn-primary bgc-blue border-0 py-3 px-4 fw-light w-100 w-sm-180 mt-2 mt-sm-0">
           <i class="fa-solid fa-phone me-2"></i>
           Позвонить
         </button>
@@ -164,13 +165,13 @@
           избавить вас от зубной боли.
         </p>
         <div class="mt-4 d-flex justify-content-start align-items-start flex-column flex-sm-row">
-          <button class="btn btn-primary bgc-blue border-0 py-3 px-4 me-4 fw-light w-100 !w-sm-280"
+          <button class="btn btn-primary bgc-blue border-0 py-3 px-4 me-4 fw-light w-100 w-sm-280"
                   data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('Заказать консультацию', '')">
             <i class="fa-solid fa-clipboard-list-check me-2"></i>
             Заказать консультацию
           </button>
-          <a href="tel:+7 (925) 810-08-09" class="w-100 !w-sm-180">
-            <button class="btn btn-primary bgc-blue border-0 py-3 px-4 fw-light w-100 !w-sm-180 mt-2 mt-sm-0">
+          <a href="tel:+7 (925) 810-08-09" class="w-100 w-sm-180">
+            <button class="btn btn-primary bgc-blue border-0 py-3 px-4 fw-light w-100 w-sm-180 mt-2 mt-sm-0">
               <i class="fa-solid fa-phone me-2"></i>
               Позвонить
             </button>
@@ -183,7 +184,7 @@
 
 <section class="header-info">
   <div class="container">
-    <div class="row header-info-body justify-content-between">
+    <div class="row header-info-body justify-content-between mt-5">
       <div class="col-12 col-md-6 col-lg-4 mt-4 mt-md-0 d-flex justify-content-between">
         <div class="d-flex justify-content-start align-items-start">
           <div class="header-info-icon me-2">
@@ -217,8 +218,8 @@
               </a>
             </p>
             <p class="mb-0">
-              <a href="mailto: vaagn.mnatsakanyan50@gmail.com" class="c-black">
-                vaagn.mnatsakanyan50@gmail.com
+              <a href="mailto: contact@ulibkaprofi.ru" class="c-black">
+                contact@ulibkaprofi.ru
               </a>
             </p>
             <div>
@@ -293,7 +294,7 @@
     <div class="row mt-5">
       <div class="col-11 col-md-6 col-lg-4 m-auto mt-md-0">
         <div class="prices-image">
-          <img src="images/price-images.png" alt="price-image" class="w-100 h-auto" width="400" height="330"
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/price-images.png"  alt="price-image" class="w-100 h-auto lazy" width="1" height="1"
                id="price-image">
         </div>
       </div>
@@ -343,7 +344,7 @@
     <div class="row mt-4 position-relative" id="sale-section">
       <div class="col-4 px-4">
         <div class="w-100 h-250 position-relative">
-          <img src="images/dentistry-pensioners.png" alt="Sale image" width="612" height="408" class="w-100 h-100 br-20 object-fit-cover">
+          <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/dentistry-pensioners.png" alt="Sale image" width="1" height="1" class="w-100 h-100 br-20 object-fit-cover lazy">
           <div class="w-100 h-105 bgBlur-3 bg-sale">
             <p class="fs-23 lh-25 c-white f-comfortaa fw-bold mt-3">
               10% скидка на лечение и удаление пенсионерам.
@@ -356,7 +357,7 @@
       </div>
       <div class="col-4 px-4">
         <div class="w-100 h-250 position-relative">
-          <img src="images/prof-hygiene-dentistry.png" alt="Sale image" width="612" height="408" class="w-100 h-100 br-20 object-fit-cover">
+          <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/prof-hygiene-dentistry.png" alt="Sale image" width="1" height="1" class="w-100 h-100 br-20 object-fit-cover lazy">
           <div class="w-100 h-105 bgBlur-3 bg-sale">
             <p class="fs-23 lh-25 c-white f-comfortaa fw-bold mt-3">
               Проф. Гигиена за двоих 5500.
@@ -369,7 +370,7 @@
       </div>
       <div class="col-4 px-4">
         <div class="w-100 h-250 position-relative">
-          <img src="images/childrens-dentistry-sale.png" alt="Sale image" width="612" height="408" class="w-100 h-100 br-20 object-fit-cover" >
+          <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/childrens-dentistry-sale.png" alt="Sale image" width="1" height="1" class="w-100 h-100 br-20 object-fit-cover lazy" >
           <div class="w-100 h-105 bgBlur-3 bg-sale">
             <p class="fs-23 lh-25 c-white f-comfortaa fw-bold mt-3">
               Детская стоматология 20% скидка
@@ -500,9 +501,12 @@
     <div class="row mt-lg-5">
       <div class="col-6 col-lg-4 m-auto mw-392">
         <h3 class="c-blue f-comfortaa fw-bold fs-40 text-center d-block d-lg-none mb-4">Стоматолог</h3>
-        <img src="images/mnacakanyan-vahagn-ivanovich.png"
+        <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/mnacakanyan-vahagn-ivanovich.png"
              alt="Мнацаканян Ваагн Иванович Действующие сертификаты:Стоматология общей практики; Стоматология ортопедическая; Стоматология хирургическая"
-             class="w-100"
+             class="w-100 lazy"
+             width="1"
+             height="1"
+
         >
       </div>
       <div class="col-12 col-lg-8 text-center text-lg-start">
@@ -524,42 +528,15 @@
         </ul>
 
         <div class="d-flex justify-content-center justify-content-lg-start align-items-center mt-4">
-          <img src="images/doctor-work-1.png" alt="doctor-work-1" class="me-2 w-200">
-          <img src="images/doctor-work-2.png" alt="doctor-work-2" class="me-2 w-200">
-          <img src="images/doctor-work-3.png" alt="doctor-work-3" class="w-200 d-none d-sm-block">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/doctor-work-1.png" width="1" height="1" alt="doctor-work-1" class="me-2 w-200 lazy">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/doctor-work-2.png" height="1" width="1" alt="doctor-work-2" class="me-2 w-200 lazy">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/doctor-work-3.png" width="1" height="1" alt="doctor-work-3" class="w-200 d-none d-sm-block lazy">
         </div>
 
       </div>
     </div>
   </div>
 </section>
-
-<!--<section class="reviews mt-200 mb-5" id="license">-->
-<!--  <div class="container">-->
-<!--    <h3 class="fs-62 text-center f-comfortaa c-blue fw-blue">ЛИЦЕНЗИИ</h3>-->
-
-<!--    <div class="row mt-5 bgBlur-25 border bc-blue br-20 py-5 px-2" style="background: rgba(255, 255, 255, 0.21);">-->
-<!--      <div class="col-4 mb-3 mh-277 overflow-hidden">-->
-<!--        <img src="images/certificate-1.png" alt="certificate-1" class="w-100">-->
-<!--      </div>-->
-<!--      <div class="col-4 mb-3 mh-277 overflow-hidden">-->
-<!--        <img src="images/certificate-2.png" alt="certificate-1" class="w-100">-->
-<!--      </div>-->
-<!--      <div class="col-4 mb-3 mh-277 overflow-hidden">-->
-<!--        <img src="images/certificate-3.png" alt="certificate-1" class="w-100">-->
-<!--      </div>-->
-<!--      <div class="col-4 mb-3 mh-277 overflow-hidden">-->
-<!--        <img src="images/certificate-1.png" alt="certificate-1" class="w-100">-->
-<!--      </div>-->
-<!--      <div class="col-4 mb-3 mh-277 overflow-hidden">-->
-<!--        <img src="images/certificate-1.png" alt="certificate-1" class="w-100">-->
-<!--      </div>-->
-<!--      <div class="col-4 mb-3 mh-277 overflow-hidden">-->
-<!--        <img src="images/certificate-1.png" alt="certificate-1" class="w-100">-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
 
 <section class="order-consultation mt-100">
   <div class="container">
@@ -623,25 +600,25 @@
         </ul>
       </div>
       <div class="col-12 col-sm-8 col-md-6 order-1 order-md-2 m-auto">
-        <img src="images/clinic-image.png" alt="clinic-image.png" width="1188" height="780" class="w-100 h-auto">
+        <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/clinic-image.png" alt="clinic-image.png" width="1" height="1" class="w-100 h-auto lazy">
       </div>
     </div>
     <div class="row mt-5">
       <div class="col-6 col-sm-3">
-        <img src="images/clinic-image-1.png" alt="clinic-image-1.png" width="586" height="384"
-             class="w-100 h-auto br-20">
+        <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/clinic-image-1.png" alt="clinic-image-1.png" width="1" height="1"
+             class="w-100 h-auto br-20 lazy">
       </div>
       <div class="col-6 col-sm-3">
-        <img src="images/clinic-image-2.png" alt="clinic-image-1.png" width="584" height="384"
-             class="w-100 h-auto br-20">
+        <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/clinic-image-2.png" alt="clinic-image-1.png" width="1" height="1"
+             class="w-100 h-auto br-20 lazy">
       </div>
       <div class="col-6 col-sm-3 mt-3 mt-sm-0">
-        <img src="images/clinic-image-3.png" alt="clinic-image-1.png" width="586" height="384"
-             class="w-100 h-auto br-20">
+        <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/clinic-image-3.png" alt="clinic-image-1.png" width="1" height="1"
+             class="w-100 h-auto br-20 lazy">
       </div>
       <div class="col-6 col-sm-3 mt-3 mt-sm-0">
-        <img src="images/clinic-image-4.png" alt="clinic-image-1.png" width="586" height="384"
-             class="w-100 h-auto br-20">
+        <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/clinic-image-4.png" alt="clinic-image-1.png" width="1" height="1"
+             class="w-100 h-auto br-20 lazy">
       </div>
     </div>
   </div>
@@ -668,7 +645,7 @@
         <div class="header-info-icon me-3">
           <i class="fa-solid fa-envelope fs-23"></i>
         </div>
-        <a href="mailto:vaagn.mnatsakanyan50@gmail.com" class="c-blue">vaagn.mnatsakanyan50@gmail.com</a>
+        <a href="mailto:contact@ulibkaprofi.ru" class="c-blue">contact@ulibkaprofi.ru</a>
       </div>
       <div class="d-flex justify-content-start align-items-center mt-3">
         <div class="header-info-icon me-3">
@@ -742,7 +719,7 @@
         <div class="header-info-icon me-3">
           <i class="fa-solid fa-envelope fs-23"></i>
         </div>
-        <a href="mailto:vaagn.mnatsakanyan50@gmail.com" class="c-blue">vaagn.mnatsakanyan50@gmail.com</a>
+        <a href="mailto:contact@ulibkaprofi.ru" class="c-blue">contact@ulibkaprofi.ru</a>
       </div>
       <div class="d-flex justify-content-start align-items-center mt-3">
         <div class="header-info-icon me-3">
@@ -840,7 +817,7 @@
 <footer class="mt-100 h-sm-150 bgc-blue py-3">
   <div class="container h-100 d-flex justify-content-between align-items-center flex-column flex-sm-row">
     <a href="/">
-      <img src="images/footer-logo.png" alt="footer logo">
+      <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/footer-logo.png" width="1" height="1" alt="footer logo" class="lazy">
     </a>
     <div class="my-3 my-sm-0">
       <a href="https://vk.com/ylibka_profi" class="fs-30 me-2 c-white trans">
@@ -872,7 +849,7 @@
 <div class="modal fade" id="orderCall" tabindex="-1" aria-labelledby="orderCallLabel"
      aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <form action="#" method="post" class="modal-content" id="send-message">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="orderCallLabel">
           Заказать консультацию
@@ -880,38 +857,50 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+
+        <div class="alert alert-danger d-none" role="alert" id="modal-message">
+          Пожалуйста, заполните свои данные правильно
+        </div>
+
+        <div class="alert alert-success d-none" role="alert" id="modal-success">
+          Спасибо, ваша заявка отправлена, мы свяжемся с вами в ближайшее время
+        </div>
+
         <div class="row">
           <div class="col-6">
             <label class="w-100">
-              <input type="text" placeholder="Ваше имя" class="bgc-transparent border bc-blue w-100 h-40 ps-2 rounded-1">
+              <input type="text" name="name" placeholder="Ваше имя" class="bgc-transparent border bc-blue w-100 h-40 ps-2 rounded-1">
             </label>
           </div>
           <div class="col-6 ps-0">
             <label class="w-100">
-              <input type="text" placeholder="Ваше Телефон" class="bgc-transparent border bc-blue w-100 h-40 ps-2 rounded-1">
+              <input type="number" name="tel" placeholder="Ваше Телефон" class="bgc-transparent border bc-blue w-100 h-40 ps-2 rounded-1">
             </label>
           </div>
           <div class="col-12 mt-2">
             <label class="w-100">
-              <input type="text" placeholder="Ваше Email" class="bgc-transparent border bc-blue w-100 h-40 ps-2 rounded-1">
+              <input type="email" name="email" placeholder="Ваше Email" class="bgc-transparent border bc-blue w-100 h-40 ps-2 rounded-1">
             </label>
           </div>
           <div class="col-12 mt-2">
             <label class="w-100">
-              <textarea id="text-modal" type="text" rows="3" cols="4" placeholder="Ваше Текст" class="bgc-transparent border bc-blue w-100 ps-2 pt-1 rounded-1" style="resize: none"></textarea>
+              <textarea id="text-modal" name="text" type="text" rows="3" cols="4" placeholder="Ваше Текст" class="bgc-transparent border bc-blue w-100 ps-2 pt-1 rounded-1" style="resize: none"></textarea>
             </label>
           </div>
 
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary bgc-blue border-0">Отправить</button>
+        <button type="submit" class="btn btn-primary bgc-blue border-0">
+          Отправить
+          <span class="spinner-border spinner-border-sm d-none" id="modal-spinner" role="status"></span>
+        </button>
       </div>
-    </div>
+    </form>
   </div>
 </div>
 
-<script src="js/helper.js"></script>
+<!--<script src="js/helper.js"></script>-->
 <script src="js/script.js"></script>
 </body>
 </html>
