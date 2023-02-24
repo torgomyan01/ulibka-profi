@@ -109,6 +109,7 @@ nav .info-block {
   transition: 0.3s;
   overflow: hidden;
   padding: 1rem 0 !important;
+  border-bottom-color: rgba(255, 255, 255, 0.368627451) !important;
 }
 nav .logo {
   transition: 0.3s;
@@ -598,6 +599,23 @@ a.c-white {
 }
 a.c-white:hover {
   color: #c4c4c4;
+}
+
+.map-site {
+  width: calc(100% - 37.5rem);
+}
+@media (max-width: 991px) {
+  .map-site {
+    width: 100%;
+  }
+}
+
+.h-123 {
+  height: 7.6875rem;
+}
+
+.h-420 {
+  height: 26.25rem;
 }
 
 .pt-150 {

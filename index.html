@@ -528,8 +528,8 @@
         </ul>
 
         <div class="d-flex justify-content-center justify-content-lg-start align-items-center mt-4">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/doctor-work-1.png" width="1" height="1" alt="doctor-work-1" class="me-2 w-200 lazy">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/doctor-work-2.png" height="1" width="1" alt="doctor-work-2" class="me-2 w-200 lazy">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/doctor-work-1.png" width="1" height="1" alt="doctor-work-1" class="me-2 w-200 h-123 lazy object-fit-cover br-20">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/doctor-work-2.png" height="1" width="1" alt="doctor-work-2" class="me-2 w-200 br-20 h-123 object-fit-cover lazy">
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/doctor-work-3.png" width="1" height="1" alt="doctor-work-3" class="w-200 d-none d-sm-block lazy">
         </div>
 
@@ -600,25 +600,25 @@
         </ul>
       </div>
       <div class="col-12 col-sm-8 col-md-6 order-1 order-md-2 m-auto">
-        <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/clinic-image.png" alt="clinic-image.png" width="1" height="1" class="w-100 h-auto lazy">
+        <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/clinic-image.png" alt="clinic-image.png" width="1" height="1" class="w-100 h-420 object-fit-cover lazy">
       </div>
     </div>
     <div class="row mt-5">
       <div class="col-6 col-sm-3">
         <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/clinic-image-1.png" alt="clinic-image-1.png" width="1" height="1"
-             class="w-100 h-auto br-20 lazy">
+             class="w-100 h-250 object-fit-cover br-20 lazy">
       </div>
       <div class="col-6 col-sm-3">
         <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/clinic-image-2.png" alt="clinic-image-1.png" width="1" height="1"
-             class="w-100 h-auto br-20 lazy">
+             class="w-100 h-250 object-fit-cover br-20 lazy">
       </div>
       <div class="col-6 col-sm-3 mt-3 mt-sm-0">
         <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/clinic-image-3.png" alt="clinic-image-1.png" width="1" height="1"
-             class="w-100 h-auto br-20 lazy">
+             class="w-100 h-250 object-fit-cover br-20 lazy">
       </div>
       <div class="col-6 col-sm-3 mt-3 mt-sm-0">
         <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP88+NPPQAJWQNxbQQkUgAAAABJRU5ErkJggg==" data-src="images/clinic-image-4.png" alt="clinic-image-1.png" width="1" height="1"
-             class="w-100 h-auto br-20 lazy">
+             class="w-100 h-250 object-fit-cover br-20 lazy">
       </div>
     </div>
   </div>
@@ -666,24 +666,31 @@
           </button>
         </a>
       </div>
-      <form action="#" method="post">
+      <form action="#" method="post" id="contact-save-mobile">
         <p class="text-center c-blue f-comfortaa fs-20 ls-1 mt-3 fw-bold">
           Обратная связь
         </p>
+        <div class="alert alert-danger d-none" role="alert" id="modal-message-contact-mobile">
+          Пожалуйста, заполните свои данные правильно
+        </div>
+
+        <div class="alert alert-success d-none" role="alert" id="modal-success-contact-mobile">
+          Спасибо, ваша заявка отправлена, мы свяжемся с вами в ближайшее время
+        </div>
         <div class="row">
           <div class="col-6">
             <label class="w-100">
-              <input type="text" placeholder="Ваше имя" class="bgc-transparent border bc-blue w-100 h-32 ps-2">
+              <input type="text" name="name" placeholder="Ваше имя" class="bgc-transparent border bc-blue w-100 h-32 ps-2">
             </label>
           </div>
           <div class="col-6">
             <label class="w-100">
-              <input type="text" placeholder="Ваш телефон" class="bgc-transparent border bc-blue w-100 h-32 ps-2">
+              <input type="text" name="tel" placeholder="Ваш телефон" class="bgc-transparent border bc-blue w-100 h-32 ps-2">
             </label>
           </div>
           <div class="col-12 mt-3">
             <label class="w-100">
-              <textarea name="user-message" cols="30" rows="3" class="bgc-transparent border bc-blue w-100 ps-2 pt-1"
+              <textarea name="text" cols="30" rows="3" class="bgc-transparent border bc-blue w-100 ps-2 pt-1"
                         style="resize: none" placeholder="Ваше сообщение"></textarea>
             </label>
           </div>
@@ -691,6 +698,7 @@
             <a href="tel:+7 (925) 810-08-09">
               <button class="btn btn-primary bgc-blue border-0 py-3 px-4 fw-light" type="submit">
                 Отправить
+                <span class="spinner-border spinner-border-sm d-none" id="modal-spinner-contact-mobile" role="status"></span>
               </button>
             </a>
           </div>
@@ -700,9 +708,11 @@
 
   </div>
   <div class="mt-5 position-relative">
-    <iframe
-      src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa1593e8c76aedca6349a95e06f65a33bc04cefe5f902700d342d1107dcea1bb0&amp;source=constructor"
-      width="100%" height="580" frameborder="0"></iframe>
+    <div class="d-flex justify-content-end">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa1593e8c76aedca6349a95e06f65a33bc04cefe5f902700d342d1107dcea1bb0&amp;source=constructor"
+        width="100%" class="map-site" height="580" frameborder="0"></iframe>
+    </div>
     <div
       class="w-600 h-100 bgc-transparent position-absolute left-0 top-0 bgBlur-15 roundRightTop-20 roundRightBottom-20 p-5 d-none d-lg-block">
       <div class="d-flex justify-content-start align-items-center">
@@ -729,7 +739,7 @@
           шоссе, 50</a>
       </div>
       <div class="mt-3">
-        <button class="btn btn-primary bgc-blue border-0 py-3 px-4 me-4 fw-light">
+        <button class="btn btn-primary bgc-blue border-0 py-3 px-4 me-4 fw-light" data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('Заказать консультацию', '')">
           <i class="fa-solid fa-clipboard-list-check me-2"></i>
           Заказать консультацию
         </button>
@@ -740,30 +750,38 @@
           </button>
         </a>
       </div>
-      <form action="#" method="post">
+      <form action="#" method="post" id="contact-save">
         <p class="text-center c-blue f-comfortaa fs-20 ls-1 mt-3 fw-bold">
           Обратная связь
         </p>
+        <div class="alert alert-danger d-none" role="alert" id="modal-message-contact">
+          Пожалуйста, заполните свои данные правильно
+        </div>
+
+        <div class="alert alert-success d-none" role="alert" id="modal-success-contact">
+          Спасибо, ваша заявка отправлена, мы свяжемся с вами в ближайшее время
+        </div>
         <div class="row">
           <div class="col-6">
             <label class="w-100">
-              <input type="text" placeholder="Ваше имя" class="bgc-transparent border bc-blue w-100 h-32 ps-2">
+              <input type="text" name="name" placeholder="Ваше имя" class="bgc-transparent border bc-blue w-100 h-32 ps-2">
             </label>
           </div>
           <div class="col-6">
             <label class="w-100">
-              <input type="text" placeholder="Ваш телефон" class="bgc-transparent border bc-blue w-100 h-32 ps-2">
+              <input type="number" name="tel" placeholder="Ваш телефон" class="bgc-transparent border bc-blue w-100 h-32 ps-2">
             </label>
           </div>
           <div class="col-12 mt-3">
             <label class="w-100">
-              <textarea name="user-message" cols="30" rows="3" class="bgc-transparent border bc-blue w-100 ps-2 pt-1"
+              <textarea name="text" cols="30" rows="3" class="bgc-transparent border bc-blue w-100 ps-2 pt-1"
                         style="resize: none" placeholder="Ваше сообщение"></textarea>
             </label>
           </div>
           <div class="col-12 d-flex justify-content-center mt-2">
             <button class="btn btn-primary bgc-blue border-0 py-3 px-4 fw-light" type="submit">
               Отправить
+              <span class="spinner-border spinner-border-sm d-none" id="modal-spinner-contact" role="status"></span>
             </button>
           </div>
         </div>
@@ -899,6 +917,25 @@
     </form>
   </div>
 </div>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(92587233, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true,
+        ecommerce:"dataLayer"
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/92587233" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 
 <!--<script src="js/helper.js"></script>-->
 <script src="js/script.js"></script>

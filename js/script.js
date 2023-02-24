@@ -27,7 +27,20 @@ const {
 }
 
 // START LAZY
-$('.lazy').lazy();
+$('.lazy').lazy({
+    beforeLoad: function(element) {
+        // called before an elements gets handled
+    },
+    afterLoad: function(element) {
+        $(element).removeAttr('width').removeAttr('height')
+    },
+    onError: function(element) {
+        // called whenever an element could not be handled
+    },
+    onFinishedAll: function() {
+        // called once all elements was handled
+    }
+});
 
 afterBeforeRange.forEach((item) => {
     item.addEventListener("input", function (e){
@@ -156,7 +169,7 @@ const servicesInfo = [
             ['Профосмотр и выдача справки', '500'],
             ['Электроодонтодиагностика', '200'],
             ['Восковое моделирование 1 ед.', '300'],
-            ['КСнятие диагностического слепка + изготовление модели', '2000'],
+            ['Снятие диагностического слепка + изготовление модели', '2000'],
             ['Дентальный снимок (диагностический)', '400'],
             ['Дентальный снимок (диагностический) кол-во 2', '700'],
             ['Дентальный снимок (диагностический) кол-во 3', '1000'],
@@ -462,5 +475,111 @@ $('#send-message').on('submit', function (e){
     }
 })
 
+const contactError = $('#modal-message-contact');
+const contactSuccess = $('#modal-success-contact');
+const contactSpinner = $('#modal-spinner-contact');
 
+$('#contact-save').on('submit', function (e){
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const tel = e.target.tel.value;
+    const text = e.target.text.value;
+
+    if(name && tel && text){
+
+        contactError.addClass('d-none');
+        contactSpinner.removeClass('d-none').attr('disabled', 'true');
+
+        $.ajax({
+            url: '../send-email.php',
+            method: 'post',
+            data: {
+                name,
+                tel,
+                email: 'no email',
+                text
+            },
+            success: function(data){
+                modalSpinner.addClass('d-none');
+                if(+data === 1){
+                    contactSuccess.removeClass('d-none');
+                    contactSpinner.addClass('d-none')
+                }
+
+                if(+data === 0){
+                    contactSuccess.addClass('d-none');
+                    contactSpinner.removeClass('d-none')
+                }
+
+                setTimeout(() => {
+                    contactSuccess.addClass('d-none')
+                }, 2000)
+            },
+            error: function (e){
+                console.log(e)
+            }
+        });
+    } else {
+        contactError.removeClass('d-none')
+    }
+})
+
+const contactErrorMobile = $('#modal-message-contact-mobile');
+const contactSuccessMobile = $('#modal-success-contact-mobile');
+const contactSpinnerMobile = $('#modal-spinner-contact-mobile');
+
+$('#contact-save-mobile').on('submit', function (e){
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const tel = e.target.tel.value;
+    const text = e.target.text.value;
+
+    if(name && tel && text){
+
+        contactErrorMobile.addClass('d-none');
+        contactSpinnerMobile.removeClass('d-none').attr('disabled', 'true');
+
+        $.ajax({
+            url: '../send-email.php',
+            method: 'post',
+            data: {
+                name,
+                tel,
+                email: 'no email',
+                text
+            },
+            success: function(data){
+                contactSpinnerMobile.addClass('d-none');
+                if(+data === 1){
+                    contactSuccessMobile.removeClass('d-none');
+                    contactSpinnerMobile.addClass('d-none')
+                }
+
+                if(+data === 0){
+                    contactSuccessMobile.addClass('d-none');
+                    contactSpinnerMobile.removeClass('d-none')
+                }
+
+                setTimeout(() => {
+                    contactSuccessMobile.addClass('d-none')
+                }, 2000)
+            },
+            error: function (e){
+                console.log(e)
+            }
+        });
+    } else {
+        contactErrorMobile.removeClass('d-none')
+    }
+})
+
+
+
+$('.slick-dots').each((index, elem) => {
+    if($(elem).children().length === 1){
+        $(elem).addClass('d-none')
+    }
+})
 
