@@ -460,6 +460,20 @@ header .container {
 .slick-next {
   right: 0;
 }
+@media (min-width: 768px) {
+  .slick-next {
+    right: -30px;
+  }
+}
+
+.slick-prev {
+  left: 0;
+}
+@media (min-width: 768px) {
+  .slick-prev {
+    left: -30px;
+  }
+}
 
 .slick-dots {
   display: flex;

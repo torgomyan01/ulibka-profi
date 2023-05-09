@@ -380,9 +380,9 @@ function changeActivePriceInfo(selectedInfo){
     $('#list-prices').html('');
     selectedInfo.prices.forEach((list, index) => {
         $('#list-prices').append(`
-                <p class="d-flex justify-content-between align-items-center py-2 border-bottom bc-blue f-comfortaa mb-0">
+                <p data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('${list[0]}', '${selectedInfo.name}')" class="d-flex cursor-pointer justify-content-between align-items-center py-2 border-bottom bc-blue f-comfortaa mb-0">
                     <span><b>${index + 1}.</b> ${list[0]}</span>
-                    <button  data-bs-toggle="modal" data-bs-target="#orderCall" onclick="AddInfoModal('${list[0]}', '${selectedInfo.name}')" class="btn btn-primary bgc-blue border-0 fs-6" style="min-width: 11.25rem;"> Заказать ${list[1]}</button>
+                    <b class="fw-bold text-nowrap">${list[1]} ₽</b>
                 </p>
             `)
     })

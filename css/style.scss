@@ -421,6 +421,17 @@ header{
 
 .slick-next{
   right: 0;
+  @media (min-width: 768px){
+    right: -30px;
+  }
+}
+
+
+.slick-prev{
+  left: 0;
+  @media (min-width: 768px){
+    left: -30px;
+  }
 }
 
 .slick-dots{
